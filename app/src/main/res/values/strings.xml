@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aviator Score Monitor</string>
+    <string name="start_monitoring">Start Monitoring</string>
+    <string name="stop_monitoring">Stop Monitoring</string>
+    <string name="threshold_label">Threshold (x)</string>
+    <string name="consecutive_count_label">Consecutive Count</string>
+    <string name="status_label">Status</string>
+    <string name="alerts_triggered">Alerts Triggered</string>
+    <string name="current_streak">Current Streak</string>
+    <string name="last_value">Last Value</string>
+    <string name="permission_required">Screen capture permission required</string>
+    <string name="grant_permission">Grant Permission</string>
+</resources>
