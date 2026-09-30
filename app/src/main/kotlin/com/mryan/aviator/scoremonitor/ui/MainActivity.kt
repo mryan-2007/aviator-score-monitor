@@ -1,8 +1,5 @@
 package com.mryan.aviator.scoremonitor.ui
 
-import android.Manifest
-import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -34,8 +31,12 @@ class MainActivity : AppCompatActivity() {
         streakInput.setText("7")
         statusText.text = "Ready to start"
 
+        // Debug: Log that views were found
+        android.util.Log.d("MainActivity", "Button found: ${startButton != null}")
+
         // Start button click listener
         startButton.setOnClickListener {
+            android.util.Log.d("MainActivity", "Button clicked! isMonitoring=$isMonitoring")
             if (isMonitoring) {
                 stopMonitoring()
             } else {
@@ -45,9 +46,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startMonitoring() {
+        android.util.Log.d("MainActivity", "startMonitoring() called")
+
         // Get values from input fields
         val thresholdText = thresholdInput.text.toString()
         val streakText = streakInput.text.toString()
+
+        android.util.Log.d("MainActivity", "Threshold: '$thresholdText', Streak: '$streakText'")
 
         // Validate inputs
         if (thresholdText.isEmpty() || streakText.isEmpty()) {
@@ -76,9 +81,11 @@ class MainActivity : AppCompatActivity() {
         streakInput.isEnabled = false
 
         Toast.makeText(this, "Monitoring started!", Toast.LENGTH_SHORT).show()
+        android.util.Log.d("MainActivity", "UI updated to monitoring state")
     }
 
     private fun stopMonitoring() {
+        android.util.Log.d("MainActivity", "stopMonitoring() called")
         isMonitoring = false
         startButton.text = "Start Monitoring"
         statusText.text = "Monitoring stopped"
