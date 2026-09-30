@@ -127,16 +127,16 @@ class CropEditorView(context: android.content.Context, attrs: android.util.Attri
         canvas.drawText(text, cropRect.centerX(), cropRect.top - 20f, textPaint)
 
         // Draw corner handles
-        drawHandle(canvas, cropRect.left, cropRect.top)           // Top-left
-        drawHandle(canvas, cropRect.right, cropRect.top)          // Top-right
-        drawHandle(canvas, cropRect.left, cropRect.bottom)        // Bottom-left
-        drawHandle(canvas, cropRect.right, cropRect.bottom)       // Bottom-right
+        drawHandle(canvas, cropRect.left, cropRect.top)
+        drawHandle(canvas, cropRect.right, cropRect.top)
+        drawHandle(canvas, cropRect.left, cropRect.bottom)
+        drawHandle(canvas, cropRect.right, cropRect.bottom)
 
         // Draw edge handles
-        drawHandle(canvas, cropRect.centerX(), cropRect.top)      // Top
-        drawHandle(canvas, cropRect.centerX(), cropRect.bottom)   // Bottom
-        drawHandle(canvas, cropRect.left, cropRect.centerY())     // Left
-        drawHandle(canvas, cropRect.right, cropRect.centerY())    // Right
+        drawHandle(canvas, cropRect.centerX(), cropRect.top)
+        drawHandle(canvas, cropRect.centerX(), cropRect.bottom)
+        drawHandle(canvas, cropRect.left, cropRect.centerY())
+        drawHandle(canvas, cropRect.right, cropRect.centerY())
     }
 
     private fun drawHandle(canvas: Canvas, x: Float, y: Float) {

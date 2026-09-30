@@ -36,14 +36,14 @@ class LeftMultiplierExtractor {
      */
     private fun cleanAndParse(raw: String): Float? {
         val cleaned = raw
-            .replace(",", ".")          // Replace comma with dot
-            .replace("O", "0")          // O → 0
-            .replace("o", "0")          // o → 0
-            .replace("I", "1")          // I → 1
-            .replace("l", "1")          // l → 1
-            .replace("S", "5")          // S → 5
-            .replace("Z", "2")          // Z → 2
-            .replace(Regex("[^0-9.]"), "") // Remove all non-digits and dots
+            .replace(",", ".")
+            .replace("O", "0")
+            .replace("o", "0")
+            .replace("I", "1")
+            .replace("l", "1")
+            .replace("S", "5")
+            .replace("Z", "2")
+            .replace(Regex("[^0-9.]"), "")
             .trim()
 
         if (cleaned.isBlank()) return null
